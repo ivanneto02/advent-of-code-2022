@@ -14,7 +14,10 @@ struct Point {
 
 struct Shape {
     Shape() : maxHeight(0) {}
-    Shape(int maxHeight) : maxHeight(maxHeight) {}
+    Shape(int maxHeight) : maxHeight(maxHeight) {
+        // cout << "shape construc being called" << endl;
+        // cout << this->coords.size() << endl;
+    }
     std::vector<Point> coords;
     virtual void fillCoords() = 0;
     void initY();
@@ -22,12 +25,18 @@ struct Shape {
 };
 
 struct HBar : public Shape {
-    HBar(int maxHeight) : Shape(maxHeight) {}
+    HBar(int maxHeight) : Shape(maxHeight) {
+        // cout << "HBar construc being called" << endl;
+        // cout << this->coords.size() << endl;
+    }
     void fillCoords() override;
 };
 
 struct Plus : public Shape {
-    Plus(int maxHeight) : Shape(maxHeight) {}
+    Plus(int maxHeight) : Shape(maxHeight) {
+        // cout << "Plus construc being called" << endl;
+        // cout << this->coords.size() << endl;
+    }
     void fillCoords() override;
 };
 
