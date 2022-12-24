@@ -198,15 +198,16 @@ void modifyStacks(vector<stack<char>>& stacks, int s, int f, int t) {
     int toIdx = t - 1;
 
     // store temporary values
-    vector<char> tmp; // stores tmp characters
+    stack<char> tmp; // stores tmp characters
     for (int i = 0; i < s; i++) {
-        tmp.push_back(stacks.at(fromIdx).top());
+        tmp.push(stacks.at(fromIdx).top());
         stacks.at(fromIdx).pop();
     }
 
     // move temporary values back to intended stack
     for (int i = 0; i < s; i++) {
-        stacks.at(toIdx).push(tmp.at(i));
+        stacks.at(toIdx).push(tmp.top());
+        tmp.pop();
     }
 
     // done :)
