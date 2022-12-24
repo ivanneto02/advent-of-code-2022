@@ -7,7 +7,7 @@ int main() {
 
     // read file
     ifstream inFS;
-    inFS.open("./day1.txt");
+    inFS.open("./input.txt");
     if (!inFS.is_open()) { exit(1); }
 
     // get characters

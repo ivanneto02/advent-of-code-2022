@@ -22,7 +22,7 @@ int main() {
 
     ifstream inFS;
 
-    inFS.open("./day5p1.txt");
+    inFS.open("./input.txt");
 
     if (!inFS.is_open()) { exit(1); }
     

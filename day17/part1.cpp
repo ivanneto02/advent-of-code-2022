@@ -94,7 +94,7 @@ int main() {
 
     int maxShapes = 100000;
 
-    inFS.open("./test.txt");
+    inFS.open("./input.txt");
 
     if (!inFS.is_open()) { 
         cout << "could not open input file" << endl;    
